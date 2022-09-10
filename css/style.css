@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300&family=Bebas+Neue&display=swap');
+:root{
+    background-color: rgb(54, 65, 62);
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    
+}
+
+h1{
+    font-size: 5.4rem;
+    color: rgb(249, 203, 64);
+    margin-bottom: 3rem;
+    font-family:'Bebas Neue', cursive;
+}
+
+h2{
+
+}
+
+h3{
+    font-size: 1.5rem;
+    margin-bottom: 4rem;
+    color: white;
+    font-family: 'Barlow Condensed', sans-serif;
+}
+
+.container{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 80rem;
+    margin: 0 auto;
+    text-align: center;
+    padding: 2rem;
+}
+
+.start{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.hidden{
+    display: none;
+}
+
+.btn{
+    font-size: 1.5rem;
+    padding: 1.1rem;
+    width: 20rem;
+    text-align: center;
+    margin-bottom: 0.5rem;
+    text-decoration: none;
+    color: rgb(54, 65, 62);
+    background-color:  rgb(238, 229, 233);
+    border-radius: .5rem;
+}
+.btn:hover{
+    cursor: pointer;
+    box-shadow: 0 0.4rem 1.4rem 0 rgba(151, 216, 178,0.6);
+    transition: transform 150ms;
+    transform: scale(1.05);
+}
+
+.btn[disabled]:hover{
+    cursor: none;
+    box-shadow: none;
+    transform: none;
+}

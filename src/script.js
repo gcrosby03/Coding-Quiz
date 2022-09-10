@@ -1,64 +1,64 @@
-var start_btn = document.querySelector(".start-btn")
+var start_btn = document.querySelector(".start-btn");
+var score = 0;
+const CORRECT_BONUS = 10;
+const MAX_QUESTIONS = 5;
+var availableQuestions = [];
+var questionCounter = 0;
+
+function getNewQuestion() {
 
 
-start_btn.addEventListener("click", function() {
+}
+
+start_btn.addEventListener("click", function () {
 
 })
 
 var questions = [
-    {
-        numb: 1,
-        question: "What does HTML stand for?",
-        answer: "Hyper Text Markup Language",
-        options: [
-            "Hyper Text Multi Language",
-            "Hyper Text Preprocessor",
-            "Hyper Text Markup Language",
-            "Hyper Text Multiple Language"
-        ]
-    },
-    {
-        numb: 2,
-        question: "insert question",
-        answer: "insert answer",
-        options: [
-            "",
-            "",
-            "",
-            ""
-        ]
-    },
-    {
-          numb: 3,
-          question: "Your Question is Here",
-          answer: "Correct answer of the question is here",
-          options: [
-            "Option 1",
-            "option 2",
-            "option 3",
-            "option 4"
-          ]
-        },
-        {
-            numb: 4,
-            question: "Your Question is Here",
-            answer: "Correct answer of the question is here",
-            options: [
-              "Option 1",
-              "option 2",
-              "option 3",
-              "option 4"
-            ]
-          },
-          {
-            numb: 5,
-            question: "Your Question is Here",
-            answer: "Correct answer of the question is here",
-            options: [
-              "Option 1",
-              "option 2",
-              "option 3",
-              "option 4"
-            ]
-          },
+  {
+    question: "What does HTML stand for?",
+    choice1: "Hyper Text Multi Language",
+    choice2: "Hyper Text Preprocessor",
+    choice3: "Hyper Text Markup Language",
+    choice4: "Hyper Text Multiple Language",
+    answer: 3
+
+  },
+  {
+    question: "Your Question is Here",
+    choice1: "Option 1",
+    choice2: "option 2",
+    choice3: "option 3",
+    choice4: "option 4",
+    answer: 2
+
+  },
+  {
+    question: "Your Question is Here",
+    choice1: "Option 1",
+    choice2: "option 2",
+    choice3: "option 3",
+    choice4: "option 4",
+    answer: 1
+  },
+  {
+    question: "Your Question is Here",
+    choice1: "Option 1",
+    choice2: "option 2",
+    choice3: "option 3",
+    choice4: "option 4",
+    answer: 4
+  },
+  {
+    question: "Your Question is Here",
+    choice1: "Option 1",
+    choice2: "option 2",
+    choice3: "option 3",
+    choice4: "option 4",
+    answer: 2
+  },
 ]
+
+for (var i = 0; i < questions.length; i++) {
+
+}
