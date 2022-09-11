@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300&family=Bebas+Neue&display=swap');
+
+
+body{
+    font-size: 2.0rem;
+    color: white;
+    font-family: 'Barlow Condensed', sans-serif;
+}
+
+h3{
+    font-size: larger;
+}
+
+.choice-container{
+    display: flex;
+    margin-bottom: 0.8rem;
+    width: 100%;
+    border-radius: 5px;
+    background: rgb(18,93,255);
+    min-width: 80rem;
+}
+
+.choice-container:hover{
+    cursor: pointer;
+    box-shadow:  0 0.4rem 1.4rem rgba(6, 103, 247,0.5);
+    transform: scale(1.03);
+    transform: 100ms;
+}
+
+.choice-prefix{
+    padding: 2rem 2.5rem;
+    color: white;
+}
+
+.choice-text{
+    padding: 2rem;
+    width: 100%;
+    text-align: left;
+}
+
+.correct{
+    background-color: green;
+}
+
+.incorrect{
+    background-color: red;
+}
+
+/* Heads up display */
+#hud{
+    display: flex;
+    justify-content: space-between;
+}
+
+.hud-prefix{
+    text-align: center;
+    font-size: 2rem;
+}
+
+.hud-main-text{
+    text-align: center;
+}
+
+#progressBar{
+    width: 20rem;
+    height: 3rem;
+    border: 0.2rem solid green;
+    margin-top: 2rem;
+    border-radius: 50px;
+    overflow: hidden;
+}
+
+#progressBarFull{
+    height: 100%;
+    background: green;
+    width: 0%;
+}
+
+@media  screen and (max-width: 768px) {
+.choice-container{
+    min-width: 40rem;
+}
+}
