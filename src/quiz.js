@@ -3,6 +3,7 @@ var choices = Array.from(document.querySelectorAll('.choice-text'));
 var progressText = document.querySelector('#progress-text');
 var scoreText = document.querySelector('#score');
 var progressBarFull = document.querySelector('#progressBarFull');
+var timer = 0;
 
 let currentQuestion = {};
 let acceptingAnswers = true;
@@ -12,46 +13,46 @@ let availableQuestion = []
 
 let questions = [
     {
-        question: 'What is 2+2',
-        choice1: '2',
-        choice2: '4',
-        choice3: '7',
-        choice4: '6',
-        answer: 2,
+        question: 'What does HTML stand for?',
+        choice1: 'Home Tool Markup Language',
+        choice2: 'Hyper Text Markup Language',
+        choice3: 'Hyperlinks and Text Markup Language',
+        choice4: 'Hyper Text Marking Language',
+        answer: 2
     },
     {
-        question: 'What is 2+2',
-        choice1: '2',
-        choice2: '4',
-        choice3: '7',
-        choice4: '6',
-        answer: 2,
+        question: 'Choose the correct HTML element for the largest heading:',
+        choice1: '<head>',
+        choice2: '<heading>',
+        choice3: '<h1>',
+        choice4: '<h6>',
+        answer: 3
     },
     {
-        question: 'What is 2+2',
-        choice1: '2',
-        choice2: '4',
-        choice3: '7',
-        choice4: '6',
-        answer: 2,
+        question: 'What is the correct HTML element for inserting a line break?',
+        choice1: '<break>',
+        choice2: '<br>',
+        choice3: '<lb>',
+        choice4: '<breakpoint>',
+        answer: 2
     },
     {
-        question: 'What is 2+2',
-        choice1: '2',
-        choice2: '4',
-        choice3: '7',
-        choice4: '6',
-        answer: 2,
+        question: 'How can you make a numbered list?',
+        choice1: '<ul>',
+        choice2: '<ol>',
+        choice3: '<list>',
+        choice4: '<dl>',
+        answer: 2
     },
     {
-        question: 'What is 2+2',
-        choice1: '2',
-        choice2: '4',
-        choice3: '7',
-        choice4: '6',
-        answer: 2,
+        question: 'Which character is used to indicate an end tag?',
+        choice1: '^',
+        choice2: '/',
+        choice3: '*',
+        choice4: '<',
+        answer: 2
     }
-]
+];
 
 const SCORE_POINTS = 20;
 const MAX_QUESTIONS = 5;
@@ -69,16 +70,16 @@ function getNewQuestion() {
         return endQuiz()
     }
     questionCounter++
-    progressText.innerHTML = `Question ${questionCounter} of ${MAX_QUESTIONS}`
+    progressText.innerText = `Question ${questionCounter} of ${MAX_QUESTIONS}`
     progressBarFull.style.width = `${(questionCounter / MAX_QUESTIONS) * 100}%`
 
     var questionsIndex = Math.floor(Math.random() * availableQuestion.length)
     currentQuestion = availableQuestion[questionsIndex]
-    question.innerHTML = currentQuestion.question
+    question.innerText = currentQuestion.question
 
     choices.forEach(choice => {
         var number = choice.dataset['number']
-        choice.innerHTML = currentQuestion['choice' + number]
+        choice.innerText = currentQuestion['choice' + number]
     })
 
     availableQuestion.splice(questionsIndex, 1)
@@ -98,6 +99,10 @@ choices.forEach(choice => {
         if (classToApply === 'correct') {
             incrementScore(SCORE_POINTS)
         }
+        
+        else {
+            decrementTime()
+        }
 
         selectedChoice.parentElement.classList.add(classToApply)
 
@@ -116,7 +121,9 @@ incrementScore = num => {
 startQuiz()
 
 function startTimer(duration, display) {
-    var timer = duration, minutes, seconds;
+   timer = duration;
+   var minutes;
+   var seconds;
     setInterval(function () {
         minutes = parseInt(timer / 60, 10);
         seconds = parseInt(timer % 60, 10);
@@ -132,6 +139,10 @@ function startTimer(duration, display) {
             clearInterval(end);
         }
     }, 1000);
+}
+
+function decrementTime() {
+ timer -= 60;
 }
 
 window.onload = function () {

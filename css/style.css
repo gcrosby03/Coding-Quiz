@@ -75,3 +75,50 @@ h3{
     box-shadow: none;
     transform: none;
 }
+
+/* End Page CSS */
+
+.end-form-container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 30rem;
+}
+
+input{
+    margin-bottom: 1rem;
+    width: 20rem;
+    padding: 1rem;
+    font-size: 1rem;
+    border: none;
+    box-shadow: 0 0.1rem 1.4rem 0 white;
+    border-radius: 5px;
+}
+
+input::placeholder{
+    color: #aaa;
+}
+
+#username{
+    margin-bottom: 2rem;
+    width: 100%;
+    outline: none;
+}
+
+#end-text{
+    font-size: 2rem;
+color: white;
+text-align: center;
+padding-bottom: 2rem;
+}
+
+#saveScoreBtn{
+    border: none;
+    width: 100%;
+}
+
+.custom-btn{
+ margin-top: 1.5rem;
+ 
+}
