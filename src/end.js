@@ -9,6 +9,7 @@ var MAX_HIGH_SCORES = 5;
 
 finalScore.innerHTML = mostRecentScore;
 
+// The save button is disabled until a value is given in text field
 username.addEventListener('keyup', () => {
   saveScoreBtn.disabled = !username.value;
 })

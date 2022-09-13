@@ -57,6 +57,7 @@ let questions = [
 const SCORE_POINTS = 20;
 const MAX_QUESTIONS = 5;
 
+// Created a function to start the quiz
 function startQuiz() {
     questionCounter = 0;
     score = 0;
@@ -64,6 +65,7 @@ function startQuiz() {
     getNewQuestion()
 }
 
+// This is how we get a new question and chooses a random order of the questions
 function getNewQuestion() {
     if (availableQuestion.length === 0 || questionCounter > MAX_QUESTIONS) {
         localStorage.setItem('mostRecentScore', score)
@@ -86,6 +88,8 @@ function getNewQuestion() {
     acceptingAnswers = true
 }
 
+// This we are listening for a "click" on a choice. Then either turn green or red depending on answer choice
+// we then increment the score, and decrement time if answered incorrectly, then call for a new question
 choices.forEach(choice => {
     choice.addEventListener('click', e => {
         if (!acceptingAnswers) return
@@ -120,6 +124,7 @@ incrementScore = num => {
 
 startQuiz()
 
+//This function will start the timer when started the quiz and will end and go back to home if time runs out
 function startTimer(duration, display) {
    timer = duration;
    var minutes;
