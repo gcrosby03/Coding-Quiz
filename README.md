@@ -18,9 +18,9 @@ THEN the game is over
 WHEN the game is over
 THEN I can save my initials and score
 
-![](../Coding-Quiz/assets/homepage.PNG)
-![](../Coding-Quiz/assets/quiz.PNG)
-![](../Coding-Quiz/assets/endpage.PNG)
-![](../Coding-Quiz/assets/highscorespage.PNG)
+![](./assets/homepage.PNG)
+![](./assets/quiz.PNG)
+![](./assets/endpage.PNG)
+![](./assets/highscorespage.PNG)
 
  This is the *[Deployable Link](https://gcrosby03.github.io/Coding-Quiz/index.html)*.
